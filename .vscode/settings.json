@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
-        "Backrub"
+        "Backrub",
+        "clrscr",
+        "exitonclick"
     ],
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
