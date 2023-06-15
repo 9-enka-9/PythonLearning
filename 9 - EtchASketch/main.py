@@ -16,6 +16,7 @@ def clockwise():
     t.right(10)
 
 def clearScreen():
+    t.home()
     t.clear()
     
 scr.listen()
@@ -24,7 +25,7 @@ scr.onkeypress(key="w",fun=forward)
 scr.onkeypress(key="s", fun=backward)
 scr.onkeypress(key="a", fun=counterclockwise)
 scr.onkeypress(key="d",fun=clockwise)
-scr.onkey(key="c", fun=clearScreen)
+scr.onkeypress(key="c", fun=clearScreen)
 
 scr.exitonclick()
     
