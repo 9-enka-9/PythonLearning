@@ -22,7 +22,7 @@ if guess:
     
 while isRaceOn:
     for turtle in tortoises:
-        distance=randint(0,10)
+        distance=randint(1,10)
         turtle.forward(distance)
         if turtle.xcor() >= 219:
             isRaceOn=False
@@ -31,6 +31,7 @@ while isRaceOn:
                 print(f"You've won! The {winningColor} turtle is the winner.")
             else:
                 print(f"You've lost! The {winningColor} turtle is the winner.")
+            break
         
     
     
