@@ -12,19 +12,22 @@ class Snake():
     def __init__(self):
         for i in range(3):
             self.createSegment()
-            self.segNum+=1
-    
+
+
     def createSegment(self):
         newSquare=t.Turtle(shape="square")
         newSquare.color("white")
         newSquare.pensize(width=20)
         newSquare.penup()
-        newSquare.speed(120)
+        newSquare.speed("fastest")
         if len(self.snake)==0:
             newSquare.goto(0,0)
         else:
-            newSquare.goto(self.snake[self.segNum-1].xcor()-20, self.snake[self.segNum-1].ycor())
+            newSquare.goto(self.snake[self.segNum-1].position()) 
+            #newSquare.goto(self.snake[self.segNum-1].xcor()-20, self.snake[self.segNum-1].ycor())
         self.snake.append(newSquare)
+        self.segNum+=1
+        
     
     def move(self):
         for segNumb in range(len(self.snake)-1, 0, -1):
