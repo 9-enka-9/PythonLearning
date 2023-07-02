@@ -10,11 +10,19 @@ class Ball(t.Turtle):
         self.penup()
         self.xMove=1
         self.yMove=1
+        self.moveSpeed=0.002
     
     def move(self):
         x=self.xcor()+self.xMove
         y=self.ycor()+self.yMove
         self.goto(x=x,y=y)
         
-    def bounce(self):
+    def bounceWall(self):
         self.yMove*=-1
+    
+    def bouncePaddle(self):
+        self.xMove*=-1
+        
+    def refresh(self):
+        self.xMove*=-1
+        self.home()
