@@ -8,7 +8,6 @@ DOWN=270
 
 class Snake():
     snake=[]
-    segNum=0
     def __init__(self):
         for i in range(3):
             self.createSegment()
@@ -23,10 +22,9 @@ class Snake():
         if len(self.snake)==0:
             newSquare.goto(0,0)
         else:
-            newSquare.goto(self.snake[self.segNum-1].position()) 
+            newSquare.goto(self.snake[len(self.snake)-1].position()) 
             #newSquare.goto(self.snake[self.segNum-1].xcor()-20, self.snake[self.segNum-1].ycor())
         self.snake.append(newSquare)
-        self.segNum+=1
         
     
     def move(self):
@@ -53,4 +51,11 @@ class Snake():
         if self.snake[0].heading()==LEFT:
             return 
         self.snake[0].setheading(0)
+        
+    def reset(self):
+        for seg in self.snake:
+            seg.goto(1000,1000)
+        self.snake=[]
+        for i in range(3):
+            self.createSegment()
         
