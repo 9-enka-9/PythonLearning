@@ -1,7 +1,8 @@
-with open('14 - ModifyFile\\newFile1.txt', mode='w') as file:
-    file.write('Hi, I\'m En!')
+with open('D:/PythonLearning/14 - ModifyFile/newFile1.txt', mode='r',encoding='utf-8') as file: #ABSOLUTE PATH: relative to computer
+    content=file.read()
+    print(content)
     file.close()
 
-with open(r'C:\Users\Admin\Desktop\newFile.txt', mode='a') as file:
+with open('../../newFile.txt', mode='a') as file: # RELATIVE PATH: relative to current working directory
     file.write('\nNEW TEXT')
     file.close()
