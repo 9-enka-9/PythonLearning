@@ -1,0 +1,23 @@
+//1
+Input:
+Ahsbdasa
+sAhasbDa
+Output: 1
+
+//2
+Input:
+Kingsman
+Mnasgink
+Output: 1
+
+//3
+Input:
+StringMany
+Manstring
+Output: 0
+
+//4
+Input:
+AAABC
+AABBC
+Output: 0
