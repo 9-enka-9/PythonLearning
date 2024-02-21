@@ -1,3 +1,7 @@
+import sys
+# sys.stdin = open("MINNUM.INP",'r')
+# sys.stdout = open("MINNUM.OUT", 'w')
+
 n, s = map(int, input().split())
 
 if (9*n) < s:
