@@ -23,7 +23,19 @@ if x == y:
 else:
     xx = boi(x, k-1)
     yy = boi(y, k-1)
-    addItem(xx)
-    addItem(yy)
-    z.sort()
-    print(z[k-1])
+    i, j = 0, 0
+    while i<k-1 and j<k-1:
+        if xx[i]>yy[j]:
+            z.append(yy[j])
+            j+=1
+        else:
+            z.append(xx[i])
+            i+=1
+    while i<k-1:
+        z.append(xx[i])
+        i+=1
+    while j<k-1:
+        z.append(yy[j])
+        j+=1
+
+print(z[k])

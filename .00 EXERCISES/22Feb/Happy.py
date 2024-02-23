@@ -1,7 +1,7 @@
 import sys, math
 
-# sys.stdin = open('HAPPY.INP','r')
-# sys.stdout = open('HAPPY.OUT','w')
+sys.stdin = open("HAPPY.INP",'r')
+sys.stdout = open("HAPPY.OUT",'w')
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -15,8 +15,8 @@ def isPrime(num):
     return False
 
 count = 0 
-for i in range(n-2):
-    for j in range(i+1,n-1):
+for i in range(n):
+    for j in range(i+1,n):
         for k in range(j+1,n):
             res = math.gcd(math.gcd(a[i], a[j]), a[k]) 
             if not isPrime(res) and res>1:

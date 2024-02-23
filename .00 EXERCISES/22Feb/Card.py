@@ -1,7 +1,7 @@
 import sys
 
-# sys.stdin = open('CARD.INP','r')
-# sys.stdout = open('CARD.OUT','w')
+sys.stdin = open('CARD.INP','r')
+sys.stdout = open('CARD.OUT','w')
 
 n = int(input())
 a = list(map(int, input().split()))
