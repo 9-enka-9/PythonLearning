@@ -8,7 +8,9 @@ def uoc(num):
         if num%i == 0:
             u.append(i)
             if i!=num:
-                u.append(int(num/i))
+                u.append(num//i)
+    if num!=1:
+        u.append(num)
     return u
 
 t = int(input())
@@ -23,4 +25,8 @@ for i in range(t):
 for i in range(t):
     uc = uoc(m[i])
     for j in range(n[i]):
-        for k in range(len(uc))
+        for k in range(len(uc)):
+            if a[i][j]%uc[k]!=0:
+                uc.pop(k)
+    print(len(uc))
+
