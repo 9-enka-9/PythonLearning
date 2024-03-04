@@ -8,7 +8,7 @@ dai = abs(ay - cy)
 dt = rong*dai
 cv = (rong+dai)*2
 
-if dt:
+if dt>0 and cv>0:
     print(cv,dt)
 else:
     print(-1)

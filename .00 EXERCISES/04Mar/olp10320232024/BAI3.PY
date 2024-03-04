@@ -4,10 +4,11 @@ sys.stdout = open("BAI3.OUT", "w")
 
 n = int(input())
 a = list(map(int, input().split()))
-s = -int(1e9)
+s = None
 for i in range(1, n):
     for j in range(n-i):
         t = sum(a[j:j+i])
-        s = max(s,t)
+        if s == None or s<t:
+            s = t
 
 print(s)
