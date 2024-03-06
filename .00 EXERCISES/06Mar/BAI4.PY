@@ -1,3 +1,4 @@
+
 import math
 
 def sieve(n):
@@ -17,13 +18,16 @@ def sieve(n):
 ##    return True
 
 def check(num):
-    ls = list(str(num))
-    if ls == ls[::-1]:
-        s=0
-        for i in ls:
-            s+=int(i)
-        return prime[s]
-    return False
+    t = num
+    s = 0
+    rev = 0
+    while t>0:
+        s+=t%10
+        rev = rev*10 + t%10
+        t//=10
+    if prime[s] and rev == num:
+        return 1
+    return 0
 
 import sys
 sys.stdin = open("BAI4.INP", "r")

@@ -1,12 +1,8 @@
-def check(a,end, k):
+def check(a, start, end, k):
     dic = {}
-    for i in range(end):
+    for i in range(start, end):
         dic[a[i]] = 1
-        if len(dic)>k:
-            return 0
-    if len(dic)==k:
-        return 1
-    return 0
+    return len(dic) == k
 
 import sys
 sys.stdin = open("BAI3.INP", "r")
@@ -17,7 +13,7 @@ a = list(map(int, input().split()))
 c = 0
 for i in range(k, n):
     for start in range(n-i+1):
-        c += check(a[start:start+i], i, k)
+        c += check(a, start, start+i, k)
 
 print(c)
 
