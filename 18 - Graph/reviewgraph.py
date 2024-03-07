@@ -1,6 +1,6 @@
 import sys
-# sys.stdin = open('reviewgraph.inp','r')
-# sys.stdout = open('reviewgraph.out', 'w')
+sys.stdin = open('reviewgraph.inp','r')
+##sys.stdout = open('reviewgraph.out', 'w')
 
 n, m, start = map(int, input().split())
 arr = [[0 for i in range(n+1)] for i in range(n+1)]
@@ -13,8 +13,8 @@ isUsed = [False]*(n+1)
 road = []
 
 def dfs(u):
-    flag = False
-    isUsed[u] = True
+    flag = False # kiểm tra cụt đường chưa
+    isUsed[u] = True # kiểm tra đã thăm chưa
     road.append(u)
     for v in range(n+1):
         if not isUsed[v] and arr[u][v]:
