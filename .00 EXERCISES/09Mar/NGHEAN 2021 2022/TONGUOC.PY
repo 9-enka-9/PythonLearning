@@ -2,15 +2,12 @@ def dem(num,b):
     c=0
     for i in range(1,min(int(num**0.5)+1, int(b**0.5)+1)):
         if num%i==0 and b%(3*i)==0:
-            c+=1
+            c+=i
             t = num/i
-            print(i)
             if t!=i and b%(3*t)==0:
-                c+=1
-                print(t)
+                c+=num/i
     if b%(3*num)==0:
-        c+=1
-        print(num)
+        c+=num
     return c
 
 import sys
