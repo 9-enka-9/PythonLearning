@@ -1,6 +1,6 @@
 import sys
-##sys.stdin = open("DAYSODEP.INP","r")
-##sys.stdout = open("DAYSODEP.OUT", "w")
+sys.stdin = open("DAYSODEP.INP","r")
+sys.stdout = open("DAYSODEP.OUT", "w")
 
 n, k = map(int, input().split())
 a = [0] + list(map(int, input().split())) +[0]
